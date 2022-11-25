@@ -1,6 +1,6 @@
 module.exports = {
-  title: "vuepress-theme-reco",
-  description: 'A simple and beautiful vuepress blog theme.',
+  title: "wxy0715.github.io",
+  description: 'Accumulate small streams and form rivers and seas',
   dest: 'example/public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -21,31 +21,11 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-      { text: 'sidebar', link: '/views/sidebar/' },
-      { text: 'sidebar', link: '/views/sidebargroup/' }
+      { text: '记录', link: '/views/sidebar/2022' }
     ],
     sidebar: {
       '/views/sidebar/': [
-        '',
-        'bar1',
-        'bar2'
-      ],
-      '/views/sidebargroup/': [
-        {
-          title: '基础',
-          collapsable: true,
-          children: [
-            '',
-            'bar1'
-          ]
-        },
-        {
-          title: '进阶',
-          collapsable: true,
-          children: [
-            'bar2'
-          ]
-        },
+        '2022',
       ]
     },
     type: 'blog',
@@ -58,14 +38,10 @@ module.exports = {
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
         // text: 'Tags' // 默认 “标签”
-      },
-      socialLinks: [
-        { icon: 'reco-github', link: 'https://github.com/recoluan' },
-        { icon: 'fa-camera', link: 'https://www.npmjs.com/~reco_luan' }
-      ]
+      }
     },
-    logo: '/head.png',
-    authorAvatar: '/head.png',
+    logo: '/logo.png',
+    authorAvatar: '/avatar.png',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -75,44 +51,36 @@ module.exports = {
     // 最后更新时间
     // lastUpdated: 'Last Updated',
     // 作者
-    author: 'reco_luan',
-    // 备案号
-    record: 'xxxx',
-    recordLink: 'http://www.baidu.com',
-    cyberSecurityRecord: '2222',
-    cyberSecurityLink: 'http://www.baidu.com',
+    author: 'wxy',
     // 项目开始时间
-    startYear: '2017',
-    /**
-     * 密钥 (if your blog is private)
-     */
+    startYear: '2020',
     friendLink: [
       {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com'
+        title: 'csdn',
+        desc: '分享坎坎坷坷',
+        email: '2357191256@qq.com',
+        link: 'https://blog.csdn.net/weixin_45706762?spm=1000.2115.3001.5343'
       },
       {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
+        title: '语雀',
+        desc: '记录学习日志',
+        link: 'https://www.yuque.com/fuwoquxuexi/upwovu/ig2cnv'
       },
     ],
-    /**
-     * support for
-     * '' | 'default'
-     * 'coy'
-     * 'dark'
-     * 'funky'
-     * 'okaidia'
-     * 'solarizedlight'
-     * 'tomorrow'
-     * 'twilight'
-     */
   },
   plugins: [
+    ['cursor-effects', {
+      size: 2, // size of the particle, default: 2
+      shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
+      zIndex: 999999999, // z-index property of the canvas, default: 999999999
+    }],
+    ['dynamic-title', {
+      showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+      showText: '客官欢迎回来~',
+      hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+      hideText: '客官不要走嘛~',
+      recoverTime: 2000,
+    }],
     ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
       body: [
         {
@@ -123,18 +91,6 @@ module.exports = {
         {
           type: 'image',
           src: '/rvcode_qq.png'
-        }
-      ],
-      footer: [
-        {
-          type: 'button',
-          text: '打赏',
-          link: '/donate'
-        },
-        {
-          type: 'button',
-          text: '打赏',
-          link: '/donate'
         }
       ]
     }]

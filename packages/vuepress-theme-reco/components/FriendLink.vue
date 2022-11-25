@@ -132,7 +132,7 @@ export default defineComponent({
       const { logo = '', email = '' } = info
       if (logo && /^http/.test(logo)) return logo
       if (logo && !/^http/.test(logo)) return instance.$withBase(logo)
-      return `//1.gravatar.com/avatar/${md5(email || '')}?s=50&amp;d=mm&amp;r=x`
+      //return `//1.gravatar.com/avatar/${md5(email || '')}?s=50&amp;d=mm&amp;r=x`
     }
 
     return { dataAddColor, popupWindowStyle, showDetail, hideDetail, getImgUrl }
