@@ -1,0 +1,10 @@
+16 error Error: Command failed with exit code 1: git remote update
+16 error fatal: unable to access 'https://github.com/vuepress-reco/vuepress-theme-reco-1.x.git/': Failed to connect to github.com port 443 after 75006 ms: Operation timed out
+16 error error: Could not fetch origin
+16 error Fetching origin
+16 error     at makeError (/Users/wangxingyu/wxy/vuepress-theme-reco-1.x/node_modules/@lerna/child-process/node_modules/execa/lib/error.js:60:11)
+16 error     at Function.module.exports.sync (/Users/wangxingyu/wxy/vuepress-theme-reco-1.x/node_modules/@lerna/child-process/node_modules/execa/index.js:194:17)
+16 error     at Object.execSync (/Users/wangxingyu/wxy/vuepress-theme-reco-1.x/node_modules/@lerna/child-process/index.js:39:16)
+16 error     at updateRemote (/Users/wangxingyu/wxy/vuepress-theme-reco-1.x/node_modules/@lerna/version/lib/is-behind-upstream.js:34:16)
+16 error     at isBehindUpstream (/Users/wangxingyu/wxy/vuepress-theme-reco-1.x/node_modules/@lerna/version/lib/is-behind-upstream.js:16:3)
+16 error     at VersionCommand.initialize (/Users/wangxingyu/wxy/vuepress-theme-reco-1.x/node_modules/@lerna/version/index.js:156:9)
